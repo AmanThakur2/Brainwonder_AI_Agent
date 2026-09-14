@@ -44,7 +44,8 @@ https://brainwonder-ai-agent.streamlit.app
 
 ## Video demo
 
-[Add your Loom / Drive link here.]
+Part 1 :- https://www.loom.com/share/4790225c3efe4d5ca6c338662f2650ee
+Part 2 :- https://www.loom.com/share/2ad6036121ea46f5ad1680c17db4ce7a
 
 ## Architecture
 
