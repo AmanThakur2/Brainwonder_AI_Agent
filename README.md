@@ -25,16 +25,6 @@ production drafting platform.
   ```bash
   pip install -r requirements.txt
   ```
-- (Optional) copy `.env.example` to `.env` and configure **one** LLM provider — or none:
-  - **Anthropic**: set `ANTHROPIC_API_KEY`
-  - **Hugging Face**: set `HF_TOKEN` (and optionally `HF_MODEL`, default
-    `meta-llama/Llama-3.1-8B-Instruct`) — uses the free HF Inference API
-  - Leave both blank and the app runs in **template-fallback mode**, which still produces a
-    complete result with no network call at all.
-  - You can also paste a key/token directly into the running app's sidebar instead of using
-    `.env`; the sidebar also lets you force a specific provider.
-  - If both are set, Anthropic is used by default; force a specific one with
-    `GENERATION_PROVIDER=anthropic|huggingface|template`.
 
 ## How to run
 
@@ -47,23 +37,10 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-Or run the pipeline headlessly and inspect the files in `outputs/`:
-
-```bash
-python3 src/pipeline.py
-```
-
-Run the validator sanity tests (deliberately corrupts a clean document in known ways and
-checks each rule catches it):
-
-```bash
-python3 tests/test_validators.py
-```
 
 ## Working link
 
-[Add your deployed Streamlit Community Cloud / HF Spaces link here.] Free-tier hosting
-sleeps when idle — expect a ~30–60s cold start on first load.
+https://brainwonder-ai-agent.streamlit.app 
 
 ## Video demo
 
