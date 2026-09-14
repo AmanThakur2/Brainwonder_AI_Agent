@@ -1,0 +1,15 @@
+{
+  "overall_score": 100,
+  "dimension_scores": {
+    "entity_accuracy": 100,
+    "completeness": 100,
+    "structure": 100,
+    "consistency": 100,
+    "template_fidelity": 100,
+    "hallucination": 100
+  },
+  "issues": [],
+  "scoring_explanation": "Each dimension starts at 100. Every 'error' issue found in that dimension deducts 15 points; every 'warning' deducts 5 points; scores are floored at 0. The overall score is the simple average of the six dimension scores. 0 issue(s) were detected across all dimensions by deterministic checks run against the format rules and the supplied case data (no LLM judging was used for scoring, keeping the score reproducible).",
+  "generation_mode": "template_fallback",
+  "generated_at": "2026-09-14T14:27:46.496702Z"
+}

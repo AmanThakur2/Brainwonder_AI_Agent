@@ -1,0 +1,5 @@
+streamlit>=1.35
+python-docx>=1.1
+anthropic>=0.34
+huggingface_hub>=0.24
+python-dotenv>=1.0

@@ -1,0 +1,88 @@
+{
+  "parts_in_order": [
+    "forum_heading",
+    "jurisdiction",
+    "case_number",
+    "cause_title",
+    "affidavit_title",
+    "deponent_clause",
+    "numbered_paragraphs",
+    "prayer",
+    "jurat",
+    "verification"
+  ],
+  "fixed_phrases": {
+    "deponent_clause": [
+      "above named",
+      "do hereby solemnly affirm and state as under:"
+    ],
+    "paragraph_1": [
+      "am well acquainted with the facts and circumstances of the case",
+      "I have perused the Petition and the documents annexed thereto",
+      "am competent to affirm this Affidavit in Reply"
+    ],
+    "blanket_denial": [
+      "At the outset, I deny each and every allegation, contention and submission",
+      "save and except those specifically admitted herein",
+      "misconceived, devoid of merits and is liable to be dismissed in limine"
+    ],
+    "preliminary_position": [
+      "has suppressed material facts",
+      "strictly in accordance with law and after following due procedure",
+      "No legal, constitutional or fundamental right"
+    ],
+    "substantive_answer": [
+      "With reference to the averments made in the Petition",
+      "the same are false, incorrect and denied",
+      "has failed to make out any case warranting interference",
+      "the extraordinary writ jurisdiction of this Hon'ble Court"
+    ],
+    "closing": [
+      "In the premises aforesaid",
+      "deserves to be dismissed with costs"
+    ],
+    "prayer": [
+      "I therefore respectfully pray that this Hon'ble Court may be pleased to:",
+      "grant such other and further reliefs as this Hon'ble Court may deem fit and proper"
+    ],
+    "verification": [
+      "true and correct to my knowledge and belief",
+      "nothing material has been concealed therefrom"
+    ]
+  },
+  "deponent_rule": {
+    "person_template": "the Respondent No.{n} above named",
+    "organisation_template": "the {designation} of the Respondent No.{n} above named",
+    "forbidden_for_organisation": "I am the Respondent No.{n}",
+    "verb_agreement": {
+      "solemnly affirm": "Solemnly affirmed",
+      "swear and affirm": "Sworn"
+    }
+  },
+  "paragraph_sequence": [
+    {"para": 1, "move": "IDENTITY_AND_PERUSAL"},
+    {"para": 2, "move": "BLANKET_DENIAL"},
+    {"para": 3, "move": "PRELIMINARY_POSITION"},
+    {"para": "4..N-1", "move": "SUBSTANTIVE_ANSWER"},
+    {"para": "N", "move": "CLOSING"}
+  ],
+  "invariants": [
+    {
+      "id": "verb_agreement",
+      "description": "Verification verb in the deponent clause must match the jurat verb.",
+      "example_violation": "Deponent clause says 'solemnly affirm' but jurat says 'Sworn'."
+    },
+    {
+      "id": "verification_range",
+      "description": "Verification paragraph range must equal the actual number of body paragraphs (1 to N).",
+      "example_violation": "Body has 6 paragraphs but verification reads 'paragraphs 1 to 5'."
+    }
+  ],
+  "not_covered_by_sample": [
+    "para-wise reply",
+    "tribunal and board formats",
+    "statutory citations",
+    "case-law citations",
+    "monetary amounts"
+  ]
+}
